@@ -1,15 +1,14 @@
 #one {
   background-color: black;
-  width: 75%;
-  height: 25%;
+  width: 50%;
+  height: 50%;
   float:left;
-  
   
 }
 #two {
   background-color: red;
-  width: 75%;
-  height: 25%;
-  float: right;
+  width: 50%;
+  height: 50%;
+  float:right;
 }
 
