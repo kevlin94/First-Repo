@@ -1,5 +1,15 @@
-body {
+#one {
   background-color: black;
+  width: 75%;
+  height: 25%;
+  float:left;
   
   
 }
+#two {
+  background-color: red;
+  width: 75%;
+  height: 25%;
+  float: right;
+}
+
