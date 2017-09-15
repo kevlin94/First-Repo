@@ -1,0 +1,33 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <script>
+      function addAnother() {
+        var newListItem=document.createElement('li');
+        var newText=document.createTextNode('Turkey');
+        newListItem.appendChild(newText);
+        var position=document.getElementsByTagName('ul')[0];
+        position.appendChild(newListItem);
+      }
+      
+      
+      
+    </script>
+    <button onclick="addAnother()">
+      Click Here
+    </button>
+    <ul>
+      <li>Chicken</li>
+      <li>Duck</li>
+      <li>Goose</li>
+      
+      
+    </ul>
+    
+  </body>
+  
+  
+  
+</html>
