@@ -1,0 +1,30 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <input type="text" id="x">
+    <script>
+      function addAnother() {
+        var newListItem=document.createElement('li');
+        var x=document.getElementById('x').value;
+        var newText=document.createTextNode(x);
+        newListItem.appendChild(newText);
+        var position=document.getElementsByTagName('ol')[0];
+        position.appendChild(newListItem);
+      }
+      
+    </script>
+    <button onclick="addAnother()">
+      Check In
+    </button>
+    <ol>
+      
+      
+    </ol>
+  
+    
+  </body>
+  
+  
+</html>
