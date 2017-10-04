@@ -3,7 +3,16 @@
     
   </head>
   <body>
+    <div>
+      <h1>Room 1</h1>
     <input type="text" id="x">
+      <button onclick="addAnother()">
+      Check In
+    </button>
+    <input type="number" id="z">
+     <button onclick="removeAnother()">
+      Check Out
+    </button>
     <script>
       function addAnother() {
         var newListItem=document.createElement('li');
@@ -11,17 +20,24 @@
         var newText=document.createTextNode(x);
         newListItem.appendChild(newText);
         var position=document.getElementsByTagName('ol')[0];
-        position.appendChild(newListItem);
-      }
+        position.appendChild(newListItem);}
+        
+        function removeAnother(){
+          var z=document.getElementById('z').value;
+          
+          var list= document.getElementsByTagName('li')[z];
+          var ol=list.parentNode;
+          ol.removeChild(list);
+        
+          
+        }
       
     </script>
-    <button onclick="addAnother()">
-      Check In
-    </button>
     <ol>
       
       
     </ol>
+    </div>
   
     
   </body>
