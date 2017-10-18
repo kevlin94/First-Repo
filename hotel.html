@@ -1,45 +1,59 @@
 <html>
   <head>
-    
+   
   </head>
   <body>
-    <div>
-      <h1>Room 1</h1>
-    <input type="text" id="x">
-      <button onclick="addAnother()">
-      Check In
-    </button>
-    <input type="number" id="z">
-     <button onclick="removeAnother()">
-      Check Out
-    </button>
+   
     <script>
-    i=0;
-     function addAnother() { if(i<3){
-        var newListItem=document.createElement('li');
-        var x=document.getElementById('x').value;
-        var newText=document.createTextNode(x);
-        newListItem.appendChild(newText);
-        var position=document.getElementsByTagName('ol')[0];
-        position.appendChild(newListItem);
-        i++;}
-        
-      else{window.alert("Room is Full")}
-     }
-        
-        function removeAnother(){
-          var z=document.getElementById('z').value;
+      
+       rOne=0;
+
+	function addAnother1() {
+		if (rOne<3) {
+		//this will only run IF there are less than 3 guests
+		//document.getElementById('guest1').style.visibility = "visible";
+		//Force the display box to be visible
+		var list1 = document.createElement('li');
+		//create a list item
+		var takeName = document.getElementById('guest1').value;
+		//get the guests name and save it as takeName
+		var textnode = document.createTextNode(takeName);
+		//turn the guests name into a textNode
+		list1.appendChild(textnode);
+		//append it to the list item
+		document.getElementById('roomOne').appendChild(list1);
+		//then add to OL with a unique ID
+		rOne++;
+		}
+		else {
+			//document.getElementById('guest1').style.visibility = "hidden";
+
+		}
+	}
+    function removeAnother1(){
+          var z=document.getElementById('removeguest1').value;
           
           var list= document.getElementsByTagName('li')[z-1];
-          var ol=list.parentNode;
-          ol.removeChild(list);
-          i--;
-        
-          
-        }
+          var removeGuest=list.parentNode;
+          removeGuest.removeChild(list);
+          rOne--;
       
+    }
+    
     </script>
-    <ol>
+ <div>
+      <h1>Room 1</h1>
+    <input type="text" id="guest1">
+      <button onclick="addAnother1()">
+      Check In
+    </button>
+    <input type="number" id="removeguest1">
+     <button onclick="removeAnother1()">
+      Check Out
+    </button>
+    <ol id="roomOne">
     </ol>
     </div>
-       
+    
+    
+  
