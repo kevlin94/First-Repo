@@ -7,7 +7,9 @@
     <script>
       
        rOne=0;
-
+       rTwo=0;
+       rThree=0;
+       rFour=0;
 	function addAnother1() {
 		if (rOne<3) {
 		//this will only run IF there are less than 3 guests
@@ -27,16 +29,104 @@
 		}
 		else {
 			//document.getElementById('guest1').style.visibility = "hidden";
-
 		}
 	}
     function removeAnother1(){
           var z=document.getElementById('removeguest1').value;
-          
-          var list= document.getElementsByTagName('li')[z-1];
-          var removeGuest=list.parentNode;
-          removeGuest.removeChild(list);
+          var list=document.getElementById("roomOne");
+          list.removeChild(list.childNodes[z]);
+        
           rOne--;
+      
+    }
+    //------------------------------
+    function addAnother2() {
+		if (rTwo<3) {
+		//this will only run IF there are less than 3 guests
+		//document.getElementById('guest1').style.visibility = "visible";
+		//Force the display box to be visible
+		var list2 = document.createElement('li');
+		//create a list item
+		var takeName2 = document.getElementById('guest2').value;
+		//get the guests name and save it as takeName
+		var textnode2 = document.createTextNode(takeName2);
+		//turn the guests name into a textNode
+		list2.appendChild(textnode2);
+		//append it to the list item
+		document.getElementById('roomTwo').appendChild(list2);
+		//then add to OL with a unique ID
+		rTwo++;
+		}
+		else {
+			//document.getElementById('guest1').style.visibility = "hidden";
+		}
+	}
+    function removeAnother2(){
+          var a=document.getElementById('removeguest2').value;
+          var list2=document.getElementById("roomTwo");
+          list2.removeChild(list2.childNodes[a]);
+        
+          rTwo--;
+      
+    }
+    //----------------
+    	function addAnother3() {
+		if (rThree<3) {
+		//this will only run IF there are less than 3 guests
+		//document.getElementById('guest1').style.visibility = "visible";
+		//Force the display box to be visible
+		var list3 = document.createElement('li');
+		//create a list item
+		var takeName3 = document.getElementById('guest3').value;
+		//get the guests name and save it as takeName
+		var textnode3 = document.createTextNode(takeName3);
+		//turn the guests name into a textNode
+		list3.appendChild(textnode3);
+		//append it to the list item
+		document.getElementById('roomThree').appendChild(list3);
+		//then add to OL with a unique ID
+		rThree++;
+		}
+		else {
+			//document.getElementById('guest1').style.visibility = "hidden";
+		}
+	}
+    function removeAnother3(){
+          var t=document.getElementById('removeguest3').value;
+          var list3=document.getElementById("roomThree");
+          list3.removeChild(list3.childNodes[t]);
+        
+          rThree--;
+      
+    }
+    //--------------
+     function addAnother4() {
+		if (rFour<3) {
+		//this will only run IF there are less than 3 guests
+		//document.getElementById('guest1').style.visibility = "visible";
+		//Force the display box to be visible
+		var list4 = document.createElement('li');
+		//create a list item
+		var takeName4 = document.getElementById('guest4').value;
+		//get the guests name and save it as takeName
+		var textnode4 = document.createTextNode(takeName4);
+		//turn the guests name into a textNode
+		list4.appendChild(textnode4);
+		//append it to the list item
+		document.getElementById('roomFour').appendChild(list4);
+		//then add to OL with a unique ID
+		rFour++;
+		}
+		else {
+			//document.getElementById('guest1').style.visibility = "hidden";
+		}
+	}
+    function removeAnother4(){
+          var y=document.getElementById('removeguest4').value;
+          var list4=document.getElementById("roomFour");
+          list4.removeChild(list4.childNodes[y]);
+        
+          rFour--;
       
     }
     
@@ -55,5 +145,46 @@
     </ol>
     </div>
     
+    <div>
+      <h1>Room 2</h1>
+    <input type="text" id="guest2">
+      <button onclick="addAnother2()">
+      Check In
+    </button>
+    <input type="number" id="removeguest2">
+     <button onclick="removeAnother2()">
+      Check Out
+    </button>
+    <ol id="roomTwo">
+    </ol>
+    </div>
     
-  
+    <div>
+      <h1>Room 3</h1>
+    <input type="text" id="guest3">
+      <button onclick="addAnother3()">
+      Check In
+    </button>
+    <input type="number" id="removeguest3">
+     <button onclick="removeAnother3()">
+      Check Out
+    </button>
+    <ol id="roomThree">
+    </ol>
+    </div>
+    
+    <div>
+      <h1>Room 4</h1>
+    <input type="text" id="guest4">
+      <button onclick="addAnother4()">
+      Check In
+    </button>
+    <input type="number" id="removeguest4">
+     <button onclick="removeAnother4()">
+      Check Out
+    </button>
+    <ol id="roomFour">
+    </ol>
+    </div>
+    </body>
+    </html>
