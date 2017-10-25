@@ -13,8 +13,6 @@
 	function addAnother1() {
 		if (rOne<3) {
 		//this will only run IF there are less than 3 guests
-		//document.getElementById('guest1').style.visibility = "visible";
-		//Force the display box to be visible
 		var list1 = document.createElement('li');
 		//create a list item
 		var takeName = document.getElementById('guest1').value;
@@ -28,13 +26,14 @@
 		rOne++;
 		}
 		else {
-			//document.getElementById('guest1').style.visibility = "hidden";
+			document.getElementById('guest1').style.visibility = "hidden";
 		}
 	}
     function removeAnother1(){
           var z=document.getElementById('removeguest1').value;
           var list=document.getElementById("roomOne");
           list.removeChild(list.childNodes[z]);
+          document.getElementById('guest1').style.visibility = "visible";
         
           rOne--;
       
@@ -43,8 +42,6 @@
     function addAnother2() {
 		if (rTwo<3) {
 		//this will only run IF there are less than 3 guests
-		//document.getElementById('guest1').style.visibility = "visible";
-		//Force the display box to be visible
 		var list2 = document.createElement('li');
 		//create a list item
 		var takeName2 = document.getElementById('guest2').value;
@@ -58,14 +55,14 @@
 		rTwo++;
 		}
 		else {
-			//document.getElementById('guest1').style.visibility = "hidden";
+			document.getElementById('guest2').style.visibility = "hidden";
 		}
 	}
     function removeAnother2(){
           var a=document.getElementById('removeguest2').value;
           var list2=document.getElementById("roomTwo");
           list2.removeChild(list2.childNodes[a]);
-        
+        document.getElementById('guest2').style.visibility = "visible";
           rTwo--;
       
     }
@@ -88,14 +85,14 @@
 		rThree++;
 		}
 		else {
-			//document.getElementById('guest1').style.visibility = "hidden";
+			document.getElementById('guest3').style.visibility = "hidden";
 		}
 	}
     function removeAnother3(){
           var t=document.getElementById('removeguest3').value;
           var list3=document.getElementById("roomThree");
           list3.removeChild(list3.childNodes[t]);
-        
+        document.getElementById('guest3').style.visibility = "visible";
           rThree--;
       
     }
@@ -118,14 +115,14 @@
 		rFour++;
 		}
 		else {
-			//document.getElementById('guest1').style.visibility = "hidden";
+			document.getElementById('guest4').style.visibility = "hidden";
 		}
 	}
     function removeAnother4(){
           var y=document.getElementById('removeguest4').value;
           var list4=document.getElementById("roomFour");
           list4.removeChild(list4.childNodes[y]);
-        
+          document.getElementById('guest4').style.visibility = "visible";
           rFour--;
       
     }
