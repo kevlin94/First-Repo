@@ -5,7 +5,7 @@
   <body>
    
     <script>
-      
+      var d = new Date();
        rOne=0;
        rTwo=0;
        rThree=0;
@@ -17,7 +17,7 @@
 		//create a list item
 		var takeName = document.getElementById('guest1').value;
 		//get the guests name and save it as takeName
-		var textnode = document.createTextNode(takeName);
+		var textnode = document.createTextNode(takeName+" "+d);
 		//turn the guests name into a textNode
 		list1.appendChild(textnode);
 		//append it to the list item
@@ -46,7 +46,7 @@
 		//create a list item
 		var takeName2 = document.getElementById('guest2').value;
 		//get the guests name and save it as takeName
-		var textnode2 = document.createTextNode(takeName2);
+		var textnode2 = document.createTextNode(takeName2+" "+d);
 		//turn the guests name into a textNode
 		list2.appendChild(textnode2);
 		//append it to the list item
@@ -76,7 +76,7 @@
 		//create a list item
 		var takeName3 = document.getElementById('guest3').value;
 		//get the guests name and save it as takeName
-		var textnode3 = document.createTextNode(takeName3);
+		var textnode3 = document.createTextNode(takeName3+" "+d);
 		//turn the guests name into a textNode
 		list3.appendChild(textnode3);
 		//append it to the list item
@@ -106,7 +106,7 @@
 		//create a list item
 		var takeName4 = document.getElementById('guest4').value;
 		//get the guests name and save it as takeName
-		var textnode4 = document.createTextNode(takeName4);
+		var textnode4 = document.createTextNode(takeName4+" "+d);
 		//turn the guests name into a textNode
 		list4.appendChild(textnode4);
 		//append it to the list item
