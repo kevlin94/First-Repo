@@ -1,11 +1,97 @@
 <html>
   <head>
     <script src="restaurant.js"></script>
+    <style>
+      #one{background-size:auto 100%;
+      background-repeat:no-repeat;
+        background-image:url("http://ot-foodspotting-production.s3.amazonaws.com/reviews/1889907/thumb_600.jpg?1339603924");
+        height:100%;
+        color:white;
+        font-size:100px;
+
+      }
+      #two{background-size:auto 100%;
+      background-repeat:no-repeat;
+        background-image:url("http://4.bp.blogspot.com/-ktpv5wyp1ls/Uwkxuze240I/AAAAAAAAAxM/SShm9aA9-pU/s1600/DSC06619.JPG");
+        height:100%;
+        color:white;
+        font-size:100px;
+
+      }
+      #three{background-size:auto 100%;
+      background-repeat:no-repeat;
+        background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Bubble_Tea.png/150px-Bubble_Tea.png");
+        height:100%;
+        color:black;
+        font-size:100px;
+
+      }
+      #four{background-size:auto 100%;
+      background-repeat:no-repeat;
+        background-image:url("https://images-na.ssl-images-amazon.com/images/I/41j5EdNbipL._SY450_.jpg");
+        height:100%;
+        color:black;
+        font-size:100px;
+
+      }
+      #five{background-size:auto 100%;
+      background-repeat:no-repeat;
+        background-image:url("https://s3-media2.fl.yelpcdn.com/bphoto/NJ3yDo4B3Moh9nsKoTA-rw/348s.jpg");
+        height:100%;
+        color:white;
+        font-size:50px;
+
+      }
+      #six{background-size:auto 100%;
+      background-repeat:no-repeat;
+        background-image:url("https://thumbs.dreamstime.com/z/coffee-boba-bubble-tea-25401520.jpg");
+        height:100%;
+        color:black;
+        font-size:100px;
+
+      }
+      
+      
+    </style>
   </head>
   <body>
-    <div id="one"></div>
+    <div id="one">Honeydew
+    <br>
     <input type="number" id="quantity1">
-    <button onclick="buyhoneydew()">Buy</button>
+    <button onclick="buyhoneydew()">Add to Cart</button></div>
+    
+     <div id="two">Mango
+     <br>
+     
+     <input type="number" id="quantity2">
+    <button onclick="buymango()">Add to Cart</button></div>
+    
+     <div id="three">Milktea
+     <br>
+     
+     <input type="number" id="quantity3">
+    <button onclick="buymilktea()">Add to Cart</button></div>
+    
+     <div id="four">Lychee
+     <br>
+     <input type="number" id="quantity4">
+    <button onclick="buylychee()">Add to Cart</button></div>
+    
+     <div id="five">Strawberry Banana
+     <br>
+     
+     <input type="number" id="quantity5">
+    <button onclick="buystrawberrybanana()">Add to Cart</button></div>
+    
+     <div id="six">Coffee
+     <br>
+     
+     <input type="number" id="quantity6">
+    <button onclick="buycoffee()">Add to Cart</button></div>
+    
+    <button onclick="receipt()">Total</button>
+    <button onclick="clearShit()">CLEAR</button>
+  
     
     
     
